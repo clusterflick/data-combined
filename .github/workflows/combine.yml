@@ -6,7 +6,7 @@ on:
 name: Combine Data
 
 jobs:
-  transform_data:
+  combine_data:
     name: Combine and Release
     runs-on: ubuntu-latest
     env:
