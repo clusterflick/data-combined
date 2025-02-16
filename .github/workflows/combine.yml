@@ -43,3 +43,10 @@ jobs:
       - name: Output summary
         run: |
           echo "🔖 New release - ${{ steps.release.outputs.html_url }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Repository Dispatch for clusterflick.com
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: clusterflick/clusterflick.com
+          event-type: release_event
