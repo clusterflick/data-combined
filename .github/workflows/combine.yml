@@ -8,7 +8,7 @@ name: Combine Data
 jobs:
   combine_data:
     name: Combine and Release
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     env:
       MOVIEDB_API_KEY: ${{ secrets.MOVIEDB_API_KEY }}
     steps:
