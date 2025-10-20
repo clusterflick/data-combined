@@ -8,7 +8,7 @@ name: Combine Data
 jobs:
   combine_data:
     name: Combine and Release
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     env:
       MOVIEDB_API_KEY: ${{ secrets.MOVIEDB_API_KEY }}
     steps:
@@ -44,9 +44,9 @@ jobs:
         run: |
           echo "🔖 New release - ${{ steps.release.outputs.html_url }}" >> $GITHUB_STEP_SUMMARY
 
-      - name: Repository Dispatch for clusterflick.com
+      - name: Repository Dispatch for data-matched
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PAT }}
-          repository: clusterflick/clusterflick.com
+          repository: clusterflick/data-matched
           event-type: release_event
