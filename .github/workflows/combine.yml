@@ -17,7 +17,15 @@ jobs:
         with:
           node-version-file: .node-version
       - run: npm install
-      - uses: robinraju/release-downloader@v1
+      - name: Download cached data
+        uses: robinraju/release-downloader@v1
+        with:
+          repository: "clusterflick/data-cached"
+          latest: true
+          fileName: "*"
+          out-file-path: "cached-data"
+      - name: Download transformed data
+        uses: robinraju/release-downloader@v1
         with:
           repository: "clusterflick/data-transformed"
           latest: true
