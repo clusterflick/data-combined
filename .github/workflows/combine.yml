@@ -20,6 +20,7 @@ jobs:
       - name: Download cached data
         uses: robinraju/release-downloader@v1
         with:
+          token: ${{ secrets.PAT }}
           repository: "clusterflick/data-cached"
           latest: true
           fileName: "*"
@@ -27,6 +28,7 @@ jobs:
       - name: Download transformed data
         uses: robinraju/release-downloader@v1
         with:
+          token: ${{ secrets.PAT }}
           repository: "clusterflick/data-transformed"
           latest: true
           fileName: "*"
