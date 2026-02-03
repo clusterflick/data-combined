@@ -28,15 +28,25 @@ This command:
 ## Schedule
 
 The workflow is automatically triggered when the
-[data transformation workflow](https://github.com/clusterflick/data-transformed)
+[data caching workflow](https://github.com/clusterflick/data-cached)
 completes successfully. It can also be triggered manually via workflow dispatch
 if needed.
+
+## Downstream Triggers
+
+After successfully combining the data, this workflow triggers:
+
+- [data-matched](https://github.com/clusterflick/data-matched) - For enriching
+  movie data with additional sources
+- [clusterflick.com](https://github.com/clusterflick/clusterflick.com) - To
+  update the website with the latest data
 
 ## Maintenance
 
 ### Dependencies
 
-The workflow requires a GitHub secret:
+The workflow requires API keys configured as GitHub secrets:
 
+- `MOVIEDB_API_KEY` - For fetching movie metadata from The Movie Database
 - `PAT` - Personal Access Token for publishing releases and triggering
   downstream workflows
