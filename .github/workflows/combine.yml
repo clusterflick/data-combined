@@ -67,3 +67,10 @@ jobs:
           token: ${{ secrets.PAT }}
           repository: clusterflick/clusterflick.com
           event-type: release_event
+
+      - name: Repository Dispatch for analysis.clusterflick.com
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT }}
+          repository: clusterflick/analysis.clusterflick.com
+          event-type: release_event

@@ -39,7 +39,9 @@ After successfully combining the data, this workflow triggers:
 - [data-matched](https://github.com/clusterflick/data-matched) - For enriching
   movie data with additional sources
 - [clusterflick.com](https://github.com/clusterflick/clusterflick.com) - To
-  update the website with the latest data
+  update the main website with the latest data
+- [analysis.clusterflick.com](https://github.com/clusterflick/analysis.clusterflick.com) - To
+  update the analysis site with the latest data
 
 ## Maintenance
 
