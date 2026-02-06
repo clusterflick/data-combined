@@ -18,7 +18,7 @@ jobs:
           node-version-file: .node-version
       - run: npm install
       - name: Download cached data
-        uses: robinraju/release-downloader@v1
+        uses: clusterflick/release-downloader@v1
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-cached"
@@ -26,7 +26,7 @@ jobs:
           fileName: "*"
           out-file-path: "cached-data"
       - name: Download transformed data
-        uses: robinraju/release-downloader@v1
+        uses: clusterflick/release-downloader@v1
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-transformed"
