@@ -55,21 +55,21 @@ jobs:
           echo "🔖 New release - ${{ steps.release.outputs.html_url }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Repository Dispatch for data-matched
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.PAT }}
           repository: clusterflick/data-matched
           event-type: release_event
 
       - name: Repository Dispatch for clusterflick.com
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.PAT }}
           repository: clusterflick/clusterflick.com
           event-type: release_event
 
       - name: Repository Dispatch for analysis.clusterflick.com
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.PAT }}
           repository: clusterflick/analysis.clusterflick.com
