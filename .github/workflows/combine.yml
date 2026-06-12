@@ -12,6 +12,10 @@ jobs:
   combine_data:
     name: Combine and Release
     runs-on: ubuntu-latest
+    # ncipollo/release-action creates a release + tag via GITHUB_TOKEN,
+    # which requires contents: write (top-level default is contents: read).
+    permissions:
+      contents: write
     env:
       MOVIEDB_API_KEY: ${{ secrets.MOVIEDB_API_KEY }}
     steps:
