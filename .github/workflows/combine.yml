@@ -46,6 +46,8 @@ jobs:
 
       - name: Combine Data
         run: npx clusterflick/scripts combine
+        env:
+          PAT: ${{ secrets.PAT }}
 
       - name: Generate Tag
         run: echo "TAG=$(TZ=Europe/London date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV
