@@ -14,7 +14,7 @@ the Clusterflick application and other downstream consumers.
 The workflow executes the combine command to merge all venue data:
 
 ```bash
-npx clusterflick/scripts combine
+npm run combine
 ```
 
 This command:

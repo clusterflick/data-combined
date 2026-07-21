@@ -38,7 +38,7 @@ jobs:
           out-file-path: "transformed-data"
 
       - name: Combine Data
-        run: npx clusterflick/scripts combine
+        run: npm run combine
         env:
           PAT: ${{ secrets.PAT }}
 
