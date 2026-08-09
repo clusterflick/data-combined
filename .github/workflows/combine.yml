@@ -37,10 +37,26 @@ jobs:
           fileName: "*"
           out-file-path: "transformed-data"
 
+      - name: Download seen registry
+        continue-on-error: true
+        uses: clusterflick/release-downloader@v2
+        with:
+          token: ${{ secrets.PAT }}
+          repository: "clusterflick/data-diffed"
+          latest: true
+          fileName: "seen-registry.json"
+          out-file-path: "diffed-data"
+
       - name: Combine Data
         run: npm run combine
         env:
           PAT: ${{ secrets.PAT }}
+
+      # Runs after combine and reads its output: departed movies are the ones
+      # the registry knows about that combine did not produce. Writes a separate
+      # artifact, leaving combined-data.json untouched.
+      - name: Build Departed Movies
+        run: npm run departed
 
       - name: Generate Tag
         run: echo "TAG=$(TZ=Europe/London date +'%Y%m%d.%H%M%S')" >> $GITHUB_ENV

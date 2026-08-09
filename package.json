@@ -4,7 +4,8 @@
   "private": true,
   "description": "Runs scripts to combine transformed data",
   "scripts": {
-    "combine": "node node_modules/scripts/index.js combine"
+    "combine": "node node_modules/scripts/index.js combine",
+    "departed": "node node_modules/scripts/index.js departed"
   },
   "author": "Alistair Brown <github@alistairjcbrown.com>",
   "license": "MIT",

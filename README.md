@@ -25,6 +25,22 @@ This command:
 - Generates a combined dataset with consistent structure
 - Publishes the combined data as a release
 
+A second command then builds the departed-movies bundle:
+
+```bash
+npm run departed
+```
+
+Films the
+[seen registry](https://github.com/clusterflick/data-diffed#seen-registry) knows
+about that `combine` did not produce have finished their run, and this writes
+them to `departed-movies.json` so the website can keep rendering pages that
+would otherwise 404.
+
+It is a separate artifact deliberately. Nothing reading `combined-data.json` —
+the match stage, the listings, the payload every visitor downloads — should see
+films that are not screening, so these never enter it.
+
 ## Schedule
 
 The workflow is automatically triggered when the
