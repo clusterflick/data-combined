@@ -69,6 +69,8 @@ jobs:
           tag: ${{ env.TAG }}
           commit: main
           body: |
+            ⚠️ **Internal build artifact — not licensed.** This exists to feed clusterflick.com and the rest of the pipeline, and is published here only because the pipeline runs in the open. It carries third-party metadata Clusterflick cannot sublicense, has no schema guarantees, and changes without notice. For data you can use, see https://clusterflick.com/data-licence
+
             Created by job ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
       - name: Output summary
         run: |

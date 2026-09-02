@@ -68,3 +68,18 @@ The workflow requires API keys configured as GitHub secrets:
 - `MOVIEDB_API_KEY` - For fetching movie metadata from The Movie Database
 - `PAT` - Personal Access Token for publishing releases and triggering
   downstream workflows
+
+## Licence
+
+The code in this repository is licensed under the [MIT licence](LICENSE).
+
+The releases are **not licensed at all**. `combined-data.json` and
+`departed-movies.json` are internal build artifacts — they exist to feed
+clusterflick.com and the rest of the pipeline, and are published here only
+because the pipeline runs in the open. They carry third-party metadata
+Clusterflick cannot sublicense, they have no schema guarantees, and they change
+without notice or a deprecation period.
+
+For data you can use, see the
+[data licence](https://clusterflick.com/data-licence). The exact terms for this
+repository are in [LICENSE-DATA](LICENSE-DATA).
