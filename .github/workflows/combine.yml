@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: clusterflick/.github/setup@main
       - name: Download cached data
-        uses: clusterflick/release-downloader@v2
+        uses: clusterflick/release-downloader@v4
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-cached"
@@ -29,7 +29,7 @@ jobs:
           fileName: "*"
           out-file-path: "cached-data"
       - name: Download transformed data
-        uses: clusterflick/release-downloader@v2
+        uses: clusterflick/release-downloader@v4
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-transformed"
@@ -38,7 +38,7 @@ jobs:
           out-file-path: "transformed-data"
 
       - name: Download seen registry
-        uses: clusterflick/release-downloader@v2
+        uses: clusterflick/release-downloader@v4
         with:
           token: ${{ secrets.PAT }}
           repository: "clusterflick/data-diffed"
