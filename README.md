@@ -52,9 +52,8 @@ films that are not screening, so these never enter it.
 ## Schedule
 
 The workflow is automatically triggered when the
-[data caching workflow](https://github.com/clusterflick/data-cached)
-completes successfully. It can also be triggered manually via workflow dispatch
-if needed.
+[data caching workflow](https://github.com/clusterflick/data-cached) completes
+successfully. It can also be triggered manually via workflow dispatch if needed.
 
 ## Downstream Triggers
 
@@ -64,8 +63,8 @@ After successfully combining the data, this workflow triggers:
   movie data with additional sources
 - [clusterflick.com](https://github.com/clusterflick/clusterflick.com) - To
   update the main website with the latest data
-- [analysis.clusterflick.com](https://github.com/clusterflick/analysis.clusterflick.com) - To
-  update the analysis site with the latest data
+- [analysis.clusterflick.com](https://github.com/clusterflick/analysis.clusterflick.com) -
+  To update the analysis site with the latest data
 
 ## Maintenance
 
