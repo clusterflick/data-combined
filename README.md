@@ -1,5 +1,13 @@
 # data-combined
 
+> **[Clusterflick](https://clusterflick.com)** is a free, open-source site
+> listing every film showing in London, from 450+ venues in one search.
+>
+> This repository is the stage of the data pipeline that merges every venue's
+> listings into the single dataset the site is built from. See the
+> [Clusterflick organisation](https://github.com/clusterflick) for how the
+> pieces fit together.
+
 This repository contains the automated workflow for combining cinema data for
 the Clusterflick project.
 
